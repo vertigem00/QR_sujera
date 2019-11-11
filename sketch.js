@@ -37,6 +37,7 @@ function draw() {
   var vol = amp.getLevel();
   volhistory.push(vol);
   stroke(255);
+  noFill();
   let g= color('#0bb60b');
   stroke(g);
  
