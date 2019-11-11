@@ -9,7 +9,7 @@ var button;
 
 var volhistory = [];
 
-function toggleSong() {
+function toggleSong(song) {
   if (song.isPlaying()) {
     song.pause();
   } else {
@@ -18,17 +18,17 @@ function toggleSong() {
 }
 
 function preload() {
-  song = loadSound('05 Diabinha.mp3');
+  ghera = loadSound('audio/G-HERA - ZeoN ft Lezw.mp4');
+
 }
 
 function setup() {
   console.log('setup')
   musicCanvas = createCanvas(205, 65);
   musicCanvas.parent('musicCanvas');
-  musicCanvas.mousePressed(toggleSong)
+  musicCanvas.touchStarted(toggleSong);
+ 
 
-
-  song.play();
   amp = new p5.Amplitude();
 }
 
@@ -37,7 +37,9 @@ function draw() {
   var vol = amp.getLevel();
   volhistory.push(vol);
   stroke(255);
-  noFill();
+  let g= color('#0bb60b');
+  stroke(g);
+ 
   push();
   beginShape();
   for (var i = 0; i < volhistory.length; i++) {

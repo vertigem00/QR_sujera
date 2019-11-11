@@ -18,23 +18,44 @@
     <div class="grandContainer">
 
         <div class="containerFace">
-            <div class="face"></div>
+            <div class="face" >
+                <img src="face.png" alt="">
+            </div>
             <div  class="music" id="musicCanvas"></div>
             <div class="playpause">
                 <input  onclick="toggleSong()" type="checkbox" value="None" id="playpause" name="check" />
-                <label for="playpause" tabindex=1></label></div>
-        </div>
+                <label for="playpause" tabindex=1></label>
+            </div>
+    </div>
 
         <div class="containerDialog">  
 
             <div class="contentDialog" id="init" style="display: block; justify-content:first baseline;">
-                <p><br>Meus ideais ultrapassam as barreiras do real, em direção às infinitas terras virtuais… <br><br>Cuidado para não ser contaminado.</p>
+                <p>Meus ideais ultrapassam as barreiras do real, em direção às infinitas terras virtuais… <br><br>Cuidado para não ser contaminado.</p>
                 <br>
                 <p>Me chamam de lezw.<br> Ou chamavam, é o que lembro.<br><br><br>Posso te ajudar, meu chapa? </p>
             </div>
 
             <div class="contentDialog" id="dialogo">
-                <p>É estranho encontrar você por aqui, o que desejas?</p>
+                <p>Meus ideais ultrapassam as barreiras do real, em direção às infinitas terras virtuais… <br><br>Cuidado para não ser contaminado.</p>
+                <br>
+                <p>Me chamam de lezw.<br> Ou chamavam, é o que lembro.<br><br><br>Posso te ajudar, meu chapa? </p>
+            </div>
+
+            <div class="contentDialog" id="dialogoOnde">
+                <p>Não sei, olhe ao seu redor e descubra.<br><br>
+                    Quero saber é a onde EU estou, você saberia me informar?</p>
+            </div>
+
+            <div class="contentDialog" id="dialogoOnde2">
+                    <p>Que curioso.
+                        Parece que estou em uma espécie de servidor ilegal.<br>
+                        Como se minhas memórias estivessem vivas virtualmente.<br><br>O SUJERA me falou sobre o upload de memórias, mas não acreditei quando ele me contou.</p>
+            </div>
+
+            <div class="contentDialog" id="dialogoQuem">
+                <p>Já te disse meu nome, Lezw.<br><br>
+                    Trabalho como analista de dados, faço bicos em diversas empresas, já que hoje em dia os contratos estão cada vez mais difíceis.</p>
             </div>
 
             <div class="contentDialog" id="poesia">
@@ -73,8 +94,53 @@
                 <p>Gostaria de ouvir meu último lançamento?</p>
             </div>
 
-            <div class="contentDialog" id="ghera">
+        <div class="contentDialog" id="ghera" style="overflow: auto;">
                 <p>GHERA</p>
+                <p class="musicGhera">
+                        [Refrão ZeoN]<br><br>
+
+                        Subarashi, foda-se aqui não é Tokyo<br>
+                        Ingerindo ar poluído neurotóxico <br>
+                        Takashi, como se fosse Neo-Tokyo<br>
+                        Imprimindo comprimidos nootrópicos. (x2)<br>
+                        <br><br>
+                        
+                        
+                        [Verso Lesw]
+                        <br><br>
+                        Você tá brincando comigo<br>
+                        Deveria ter mais cuidado<br>
+                        Tenho seus dados guardados<br>
+                        Você corre perigo<br>
+                        Vivendo como um delinquente<br>
+                        Você não sabe de onde venho<br>
+                        <br><br>
+                        Eu to usando nanoentorpecentes<br>
+                        Veja as joias em meus dentes<br>
+                        Não precisa sentir medo<br>
+                        Faço isso desde cedo<br>
+                        Sou poderoso como um rei<br>
+                        E glamouroso como um sheik<br>
+                        <br><br>
+                        
+                        [Verso Zeon] 
+                        <br><br>
+                        IoT nessas pill <br>
+                        G-hera no corpo, i can feel<br>
+                        Meu microponto pronto<br>
+                        Na minha pele sobrepondo<br>
+                        Um artefato hediondo <br>
+                        e Nessas ruas que eu ando<br>
+                        Violência, crime e outros contos<br>
+                        
+                        <br><br>
+                        [Refrão ZeoN]
+                        <br><br>
+                        Subarashi, foda-se aqui não é Tokyo<br>
+                        Ingerindo ar poluído neurotóxico <br>
+                        Takashi, como se fosse Neo-Tokyo<br>
+                        Imprimindo comprimidos nootrópicos (x2)<br>
+                        </p>
             </div>
 
         </div>
@@ -96,22 +162,29 @@
             </div>
 
             <div class="tabOption" id="tabMusica">
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'ghera', 'tabGhera')">01. Quero sim!</button>
+                <button class="tablinks" onmouseover="audioclick()"  onclick="dialogo(event, 'ghera', 'tabGhera');toggleSong(ghera)">01. Quero sim!</button>
                 <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Não tô afim...</button>
             </div>
 
             <div class="tabOption" id="tabDialogo">
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogo')">01. Sim</button>
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'poesia')">02. Não</button>
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">Sair</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde', 'tabOnde')">01. Onde estou?</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoQuem', 'tabQuem')">02. Quem é você?</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">03. Sair</button>
+            </div>
 
+            <div class="tabOption" id="tabOnde">
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde2', 'tabOnde')">01. No meu celular</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Voltar</button>
+            </div>
+
+            <div class="tabOption" id="tabQuem">
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde2', 'tabOnde')">01. Só faz isso?</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Voltar</button>
             </div>
 
             <div class="tabOption" id='tabGhera'>
-                    <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogo')">01. Sim</button>
+                    <button class="tablinks" onclick="toggleSong(ghera)" onclick="dialogo(event, 'dialogo')">01. Sim</button>
                     <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">Sair</button>
-
-
             </div>
 
         </div>
