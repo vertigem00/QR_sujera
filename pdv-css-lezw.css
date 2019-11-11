@@ -128,7 +128,6 @@ body {
     width: 80vw;
 }
 .face {
-    background-color: #0bb60b;
     margin: 5px;
     display: flex;
     flex-direction: row;
@@ -136,6 +135,10 @@ body {
     align-items: center;
     height: 9vh;
     width: 19vw;
+}
+.face img {
+    height: 70px;
+    width: 70px;
 }
 .music {
     margin: 1px;
