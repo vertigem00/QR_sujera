@@ -19,7 +19,7 @@
 
         <div class="containerFace">
             <div class="face" >
-                <img src="face.png" alt="">
+                <img src="face.png" alt="" style="width: 70px; height: 70px;">
             </div>
             <div  class="music" id="musicCanvas"></div>
             <div class="playpause">
@@ -50,16 +50,30 @@
             <div class="contentDialog" id="dialogoOnde2">
                     <p>Que curioso.
                         Parece que estou em uma espécie de servidor ilegal.<br>
-                        Como se minhas memórias estivessem vivas virtualmente.<br><br>O SUJERA me falou sobre o upload de memórias, mas não acreditei quando ele me contou.</p>
+                        Como se minhas memórias estivessem armazenadas virtualmente em um servidor.<br><br>O SUJERA me falou sobre criar um Terminal Fantasma, mas não acreditei quando ele me contou.</p>
+            </div>   
+            
+            <div class="contentDialog" id="dialogoOnde3">
+                <p>É um amigo,
+                     ultimamente ele tá passando por alguns problemas mentais.<br>Deve ser ansiedade. Última vez que o vi, ele me disse que em breve conseguiria fazer upload de memórias.
+                    <br><br>
+                   Acho que ele tá enlouquecendo, é isso que acontece quando você abusa no uso de nanoentorpecentes.<br>
+                    <br>
+                    Ele me entregou um endereço do cyberespaço, um local chamado Terminal Fantasma, talvez você encontre mais informações sobre o SUJERA por lá.
             </div>
 
             <div class="contentDialog" id="dialogoQuem">
                 <p>Já te disse meu nome, Lezw.<br><br>
                     Trabalho como analista de dados, faço bicos em diversas empresas, já que hoje em dia os contratos estão cada vez mais difíceis.</p>
             </div>
+            
+            <div class="contentDialog" id="dialogoQuem2">
+                <p>Bem que eu queria, infelizmente o mercado está saturado de analistas.<br><br>
+                    Também me viro como pirata. Roubando uma parte dos dados que passam pelas minhas mãos e os vendendo para corporações especializadas nos terinamento de inteligências artificiais.<br><br> E escrevo poesia nos momentos vagos.
+                </div>
 
             <div class="contentDialog" id="poesia">
-               <p>Você gosta de poesia?<br> de verdade? Hm. <br><br>Tenho alguns rascunhos, vamos, dê uma olhada</<p>
+               <p>Você gosta de poesia?<br> de verdade? Hm. <br><br>Tenho alguns rascunhos, vamos, dê uma olhada</p>
             </div>
 
             <div class="contentDialog" id="poesia01">
@@ -161,11 +175,6 @@
       
             </div>
 
-            <div class="tabOption" id="tabMusica">
-                <button class="tablinks" onmouseover="audioclick()"  onclick="dialogo(event, 'ghera', 'tabGhera');toggleSong(ghera)">01. Quero sim!</button>
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Não tô afim...</button>
-            </div>
-
             <div class="tabOption" id="tabDialogo">
                 <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde', 'tabOnde')">01. Onde estou?</button>
                 <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoQuem', 'tabQuem')">02. Quem é você?</button>
@@ -173,17 +182,36 @@
             </div>
 
             <div class="tabOption" id="tabOnde">
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde2', 'tabOnde')">01. No meu celular</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde2', 'tabOnde2')">01. No meu celular</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabDialogo')">02. Voltar</button>
+            </div>
+
+            <div class="tabOption" id="tabOnde2">
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde3','tabOnde3')">01. Quem é SUJERA?</button>
                 <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Voltar</button>
             </div>
 
-            <div class="tabOption" id="tabQuem">
-                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoOnde2', 'tabOnde')">01. Só faz isso?</button>
+            <div class="tabOption" id="tabOnde3">
+                <button class="tablinks" onmouseover="audioclick()" onclick="parent.location='https://www.google.com/'">01. Acessar o Terminal Fantasma</button>
                 <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Voltar</button>
+            </div>   
+
+            <div class="tabOption" id="tabQuem">
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogoQuem2', 'tabQuem1')">01. Só faz isso?</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabDialogo')">02. Voltar</button>
+            </div>
+
+            <div class="tabOption" id="tabQuem1" style="display: none;">
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabDialogo')">01. Aahh, entendido</button>
+            </div>
+
+            <div class="tabOption" id="tabMusica">
+                <button class="tablinks" onmouseover="audioclick()"  onclick="dialogo(event, 'ghera', 'tabGhera');toggleSong(ghera)">01. Quero sim!</button>
+                <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">02. Não tô afim...</button>
             </div>
 
             <div class="tabOption" id='tabGhera'>
-                    <button class="tablinks" onclick="toggleSong(ghera)" onclick="dialogo(event, 'dialogo')">01. Sim</button>
+                    <button class="tablinks" onclick="toggleSong(ghera)" onclick="dialogo(event, 'dialogo')">Play / Pause</button>
                     <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'init', 'tabInit')">Sair</button>
             </div>
 

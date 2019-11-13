@@ -27,7 +27,6 @@ function setup() {
   musicCanvas = createCanvas(205, 65);
   musicCanvas.parent('musicCanvas');
   musicCanvas.touchStarted(toggleSong);
- 
 
   amp = new p5.Amplitude();
 }

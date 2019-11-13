@@ -1,0 +1,142 @@
+@font-face {
+    font-family: prompt;
+    src: url(/QR_sujera/font/VCR_OSD_MONO.ttf);
+}
+@font-face {
+    font-family: spantaran;
+    src: url(/QR_sujera/font/Spantaran.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.grandContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: prompt;
+
+    
+}
+.containerOlhos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75vw;
+    height: 40vh;
+    border: 4px solid grey;
+    
+
+}
+.containerOlhos img {
+    width: 25vw;
+    height: 25vw;
+}
+
+.secao{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.divOlho {
+    cursor: pointer;
+    width: 20vw;
+    height: 20vw;
+    background-color: chartreuse;
+    justify-content: center;
+    align-items: center;
+    
+}
+#olho1 {
+    float: right;
+}
+#boca {
+    cursor: pointer;
+    width: 75vw;
+    height: 36vw;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+
+}
+#olho {
+    cursor: pointer;
+    width: 35vw;
+    height: 35vw;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerDialog {
+    width: 75vw;
+    height: 25vh;
+    border: 4px solid grey;
+    margin: 5px;
+    border-radius: 2px 2px;
+    display: block;
+    font-size: 1.5em;
+    color: rgb(207, 204, 204);
+}
+
+.contentDialog {
+    margin: 8px;
+    display: none;
+}
+
+.containerOpt {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 20vh;
+    border: 4px solid grey;
+    margin: 5px;
+    border-radius: 2px 2px;
+    display: block;
+    align-items: center;
+    padding: 10px;
+}
+
+.tabOption {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    transition: 0.5s;
+    z-index: 1;
+    font-family: prompt;
+    align-self: center;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tabOption button {
+    font-family: prompt;
+    display: block;
+    background-color: grey;
+    color: white;
+    margin: 6px;
+    width: 9.6em;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 7vw;
+}
+
+/* Create an active/current "tab button" class */
+.tabOption button:active {
+    background-color: black;
+    color: white;
+}

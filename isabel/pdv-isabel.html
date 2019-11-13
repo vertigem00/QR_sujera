@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="pdv-isabel.css">
+    </head>
+
+    <body>
+        <div class="grandContainer">
+                <div id="" style="display: block;">
+                        <p style="text-align: center; font-family: spantaran; font-size: 3em; color: rgb(216, 210, 210); margin: 0px; padding: 10px 0px 0px 0px;">Isabel</p>
+                    </div>
+
+            <div class="containerDialog">
+                <div class="contentDialog" id="inicio"style="display: block;" >
+                    <p style="text-align: center;">Quem me acordou do meu sono virtual?</p>
+                </div>
+                
+                <div class="contentDialog" id="oi">
+                    <p>falaa</p>
+                </div>
+
+                <div class="contentDialog" id="contentboca">
+                    <p>Você me acha atraente?</p>
+                </div>
+            
+                <div class="contentDialog" id = "contentolhos">
+                    <p>Olhe nos meus olho</p>
+                </div>
+
+            </div>
+
+
+            <div class="containerOlhos">
+                <div class="secao" onclick="dialogo(event, 'contentolhos', 'tabOlhos')">
+                    <div class="divOlho" id="olho"><img src="itens/olho.gif" id="olho" alt=""></div>
+                    <div class="divOlho" id="olho"><img  src="itens/olho.gif" id="olho" alt=""></div>
+                </div>
+                <div class="secao" style="top: 10px; flex-direction: column;">
+                    <div class="divOlho" id="boca"><img id="boca" src="itens/boca.gif" alt="" onclick="dialogo(event, 'contentboca', 'tabBoca')"></div>
+
+                </div>
+            </div>
+
+            <div class="containerOpt">
+                <div class="tabOption" id="tabInit">
+                        <button class="tablinks" onclick="dialogo(event, 'oi', 'tabOi')">Quem é você?</button>
+                        <button class="tablinks" onclick="dialogo(event, 'oi', 'tabOi')">Sono Virtual?</button>
+                        <button class="tablinks" onclick="dialogo(event, 'oi', 'tabOi')">Oii!</button>     
+                    </div>
+
+                <div class="tabOption" id="tabOi" style="display: none;">
+                        <button class="tablinks" onclick="dialogo(event, 'Oi', 'tabDialogo')">Oi</button>     
+                    </div>
+
+                <div class="tabOption" id="tabBoca" style="display: none;">
+                        <button class="tablinks" onclick="dialogo(event, 'Oi', 'tabDialogo')">boc</button>     
+                    </div>
+
+                <div class="tabOption" id="tabOlhos" style="display: none;">
+                        <button class="tablinks" onclick="dialogo(event, 'contentOlho', 'tabDialogo')">olhos</button>     
+                    </div>
+                </div>
+
+        </div>
+        <script src="pdv-isabel.js"></script>
+
+    </body>
+</html>
