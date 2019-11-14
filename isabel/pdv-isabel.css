@@ -1,10 +1,10 @@
 @font-face {
     font-family: prompt;
-    src: url(/QR_sujera/font/VCR_OSD_MONO.ttf);
+    src: url(VCR_OSD_MONO.ttf);
 }
 @font-face {
     font-family: spantaran;
-    src: url(/QR_sujera/font/Spantaran.ttf);
+    src: url(Spantaran.ttf);
 }
 body {
     margin: 0;

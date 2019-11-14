@@ -18,7 +18,7 @@ function toggleSong(song) {
 }
 
 function preload() {
-  ghera = loadSound('/QR_sujera/audio/G-HERA - ZeoN ft Lezw.mp4');
+  ghera = loadSound('G-HERA - ZeoN ft Lezw.mp4');
 
 }
 
