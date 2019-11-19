@@ -7,14 +7,38 @@
     <body>
         <div class="grandContainer">
             <div class="containerImg">
-                <div class="zeon"></div>
-                <div class="mariposa"></div>
-                <div class="nome"></div>
-
+                <div class="zeon"><img src="zeon.png" onclick="dialogo(event, 'contentfoto', 'tabInit')"></div>
+                <div class="mariposa"><img src="mariposa.gif" onclick="dialogo(event, 'contentmariposa', 'tabInit')"></div>
+                <div class="nome"><img src="zneo.png" onclick="dialogo(event, 'contentzeon', 'tabInit')"></div>
             </div>
+
             <div class="containerInfo">
+                <div class="containercontent" id="content" style="display: block;">
+                    <p> Fala pra mim o que ce quer</p>
+                </div>
+
+                <div class="containercontent" id="contentmariposa">
+                    <p> Fala</p>
+                </div>
+                
+                <div class="containercontent" id="contentfoto">
+                    <p> Fala</p>
+                </div>
+                
+                <div class="containercontent" id="contentzeon">
+                    <p> Fala</p>
+                </div>
+
+                <div class="containeropt">
+                    <div class="tabOption" id="tabInit">
+                        <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'dialogo', 'tabDialogo')">► </button>
+                        <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'poesia', 'tabPoesia')">► Poesia</button>
+                        <button class="tablinks" onmouseover="audioclick()" onclick="dialogo(event, 'musica', 'tabMusica')">► Música</button>        
+                    </div>
+                </div>
 
             </div>
         </div>
+        <script src="pdv-js-zeon.js"></script>
     </body>
 </html>

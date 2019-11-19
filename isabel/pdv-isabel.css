@@ -63,7 +63,7 @@ body {
 #boca {
     cursor: pointer;
     width: 75vw;
-    height: 36vw;
+    height: 20vh;
     background-color: black;
     justify-content: center;
     align-items: center;
@@ -86,7 +86,7 @@ body {
     margin: 5px;
     border-radius: 2px 2px;
     display: block;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: rgb(207, 204, 204);
     justify-content: center;
     align-items: center;
@@ -139,12 +139,12 @@ body {
     background-color: grey;
     color: white;
     margin: 6px;
-    width: 9.6em;
+    width: 67vw;
     border: none;
     outline: none;
     text-align: center;
     cursor: pointer;
-    font-size: 7vw;
+    font-size: 6vw;
 }
 
 /* Create an active/current "tab button" class */
@@ -161,5 +161,34 @@ body {
     display: none;
 }
 #tabOlhos2 {
+    display: none;
+}
+
+#tabQuem {
+    display: none;
+}
+
+#tabLivre {
+    display: none;
+}
+
+
+#tabMaquina {
+    display: none;
+}
+
+#tabMaquina2 {
+    display: none;
+}
+
+#tabMaquina3 {
+    display: none;
+}
+
+#tabVirtual {
+    display: none;
+}
+
+#tabSujera {
     display: none;
 }

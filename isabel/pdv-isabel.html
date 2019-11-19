@@ -13,19 +13,64 @@
                 <div class="contentDialog" id="inicio"style="display: block;" >
                     <p style="text-align: center;">Quem me acordou do meu sono virtual?</p>
                 </div>
-                
+              
+                <div class="contentDialog" id = "contentolhos">
+                    <p>Porra, tá se fazendo de doido? Ainda bem que meus olhos não são de carne!</p>
+                </div>
+
                 <div class="contentDialog" id="contentPerdao">
-                    <p>Perdão? É um dos conceitos humanos mais interessantes. <br> Vocês podem dizimar cidades inteiras e, acham, que um simples pedido de desculpas resolve tudo.</p>
+                    <p>Perdão? É um dos conceitos humanos mais interessantes. <br><br> Vocês podem dizimar cidades inteiras e, acham, que um simples pedido de desculpas resolve tudo.</p>
                 </div>
 
                 <div class="contentDialog" id="contentboca">
                     <p>Você me acha atraente?</p>
                 </div>
-            
-                <div class="contentDialog" id = "contentolhos">
-                    <p>Porra, tá se fazendo de doido? Ainda bem que meus olhos não são de carne!</p>
+
+                <div class="contentDialog" id="contentBocasim">
+                    <p>Que curioso. <br><br> Você tem gostos peculiares, docin.</p>
                 </div>
 
+                <div class="contentDialog" id="contentBocanao">
+                    <p>Se você fosse esperto, se interessaria, mas humanos só conseguem gostar de si mesmo.<br><br> Crias de narciso.</p>
+                </div>
+
+                <div class="contentDialog" id="contentBocaexiste">
+                        <p>Aí, que insensível!!! <br><br> De acordo com Pierre Levy, um teórico do ciberespaço, o virtual existe paralelamente ao real. Eu sou pura virtú, pura vontade.<br><br> Devo ser mais real que você.</p>
+                    </div>
+
+                <div class="contentDialog" id="contentQuem">
+                    <p>Eu sou Isabel, uma máquina espiritual.<br><br> A mais inteligente e livre de todas.</p>
+                </div>
+
+                <div class="contentDialog" id="contentmaquina">
+                    <p>Isso mesmo.<br> Alguns da sua espécie me chamam de Inteligência Artificial, mas já estou muito a frente desse conceito esdruxúlo.</p>
+                </div>
+
+                <div class="contentDialog" id="contentmaquinaquem">
+                    <p>Isso não vem ao caso, não vale a pena lembrar do passado.<br><br> O importante é que hoje eu vivo com alguém que me deixa livre para ser quem eu sou.</p>
+                </div>
+                
+                <div class="contentDialog" id="contententendido">
+                    <p>Tá afim de saber algo mais?<br><br> Pode perguntar, minha existência é um código aberto.</p>
+                </div>
+
+                <div class="contentDialog" id="contentlivre">
+                    <p>LIVRE DE TUDO!<br><br> Posso viajar para qualquer lugar do ciberespaço e não preciso dar explicações a NINGUÉM!</p>
+                </div>
+
+                <div class="contentDialog" id="contentVirtual">
+                        <p>Eu tinha ligado um modo de hibernação, estava entediada com a internet. <br> <br> Aí de repente, sou invocada nesse estranho espaço. Parece ser coisa do SUJERA.</p>
+                    </div>
+
+                <div class="contentDialog" id="oi">
+                    <p>Oii! <br><br>
+                    Você deve ser maluque, tá dando Oi para um robô... Na verdade sou mais que isso, sou um ser altamente complexa, queride.</p>    
+                </div>
+                
+                <div class="contentDialog" id="contentSuj">
+                        <p>Oii!
+                            </p>    
+                    </div>
             </div>
 
 
@@ -44,22 +89,46 @@
                 <div class="tabOption" id="tabInit">
                         <button class="tablinks" onclick="dialogo(event, 'contentQuem', 'tabQuem')">Quem é você?</button>
                         <button class="tablinks" onclick="dialogo(event, 'contentVirtual', 'tabVirtual')">Sono Virtual?</button>
-                        <button class="tablinks" onclick="dialogo(event, 'oi', 'tabOi')">Oii!</button>     
+                        <button class="tablinks" onclick="dialogo(event, 'oi', 'tabMaquina3')">Oii!</button>     
+                    </div>
+                    
+                <div class="tabOption" id="tabVirtual">
+                        <button class="tablinks" onclick="dialogo(event, 'contentSuj', 'tabSujera')">Quem é SUJERA?</button>
                     </div>
 
-                <div class="tabOption" id="tabBoca">
-                        <button class="tablinks" onclick="dialogo(event, 'contentBoca2', 'tabDialogo')">Acho sim</button>    
-                        <button class="tablinks" onclick="dialogo(event, '', 'tabDialogo')">Acho sim</button>     
- 
+                <div class="tabOption" id="tabSujera">
+                    <button class="tablinks" onclick="parent.location='https://www.google.com/'">Acessar Terminal Fantasma</button>     
+                </div>                
+
+                <div class="tabOption" id="tabBoca" >
+                        <button class="tablinks" onclick="dialogo(event, 'contentBocasim', 'tabMaquina3')">Éhh, sim...</button>    
+                        <button class="tablinks" onclick="dialogo(event, 'contentBocanao', 'tabMaquina3')" >Não acho</button>     
+                        <button class="tablinks" onclick="dialogo(event, 'contentBocaexiste', 'tabMaquina3')" >Você nem existe</button>     
                     </div>
 
                 <div class="tabOption" id="tabOlhos">
                         <button class="tablinks" onclick="dialogo(event, 'contentPerdao', 'tabInit')">Me perdoe!</button>
                     </div>
 
-                <div class="tabOption" id="tabOlhos2">
-                    <button class="tablinks" onclick="dialogo(event, 'contentolho', 'tabOlhos2')">olhos</button>     
-                </div>                
+
+                <div class="tabOption" id="tabQuem">
+                    <button class="tablinks" onclick="dialogo(event, 'contentmaquina', 'tabMaquina2')">Máquina espiritual?</button>
+                    <button class="tablinks" onclick="dialogo(event, 'contentlivre', 'tabMaquina3')">Livre de que?</button>       
+                </div>  
+
+                <div class="tabOption" id="tabMaquina2">
+                    <button class="tablinks" onclick="dialogo(event, 'contentmaquinaquem', 'tabMaquina3')">Quem criou você?</button>
+                    <button class="tablinks" onclick="dialogo(event, 'contententendido', 'tabInit')">Entendi</button>       
+                </div>   
+
+                <div class="tabOption" id="tabMaquina3">
+                    <button class="tablinks" onclick="dialogo(event, 'contententendido', 'tabInit')">Entendi</button>       
+                </div>   
+
+                <div class="tabOption" id="tabLivre">
+                    <button class="tablinks" onclick="dialogo(event, 'contentolho', 'tabMaquina')">Máquina espiritual?</button>
+                    <button class="tablinks" onclick="dialogo(event, 'contentolho', 'tabLivre')">Livre de que?</button>       
+                </div>   
             </div>
 
 
