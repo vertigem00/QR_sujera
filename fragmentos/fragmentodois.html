@@ -1,0 +1,104 @@
+<html>
+    <head> 
+    </head>
+    <style>body {
+            padding: 0;
+            margin: 0;
+            background-color: #000;
+        }
+        canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #main {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          overflow: hidden;
+        }</style>
+
+    <body><!-- partial:index.partial.html -->
+        <div style="color: pink;"><p>Escute no spotfy!</p></div>
+
+        <main id="main" onclick="audioclick()" onclick="audioclick()"> </main>
+        <!-- partial -->
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/pressure/2.1.2/pressure.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js'></script><script  src="./script.js"></script>
+        </body>
+
+
+    <script>
+        audio = document.createElement('audio');
+        audio.src = 'G-HERA - ZeoN ft Lezw.mp4';
+        document.body.appendChild(audio);
+
+        function audioclick(){
+        console.log("oi audio");
+        event.preventDefault();
+        audioplay = true;
+        if(audioplay == true){audio.play()};
+    };
+    var container, material;
+var deep = 1, fluid = 0.015;
+var uniforms = {
+    speed: 0,
+    volatility: 0
+};
+
+function init() {
+    container = document.getElementById("main");
+    material = new Blotter.LiquidDistortMaterial();
+    //
+    var text = new Blotter.Text("G-HERA", {
+        weight: 800,
+        size: 50,
+        fill: 'white',
+        paddingLeft: 80,
+        paddingRight: 80,
+        paddingBottom: 80,
+        paddingTop: 80
+    });
+    /*
+     * https://blotter.js.org
+     */
+    var blotter = new Blotter(material, {
+        texts: text
+    });
+    var canvas = blotter.forText(text).domElement;
+    container.appendChild(canvas);
+    /*
+     * https://pressurejs.com
+     */
+    Pressure.set(container, {
+        change: function(force, event) {
+            deep = force;
+            fluid = 0.015;
+        },
+        end: function() {
+            fluid = 0.15;
+            deep = 0;
+        }
+    });
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
+
+function render() {
+    uniforms.volatility += ((deep * 0.5) - uniforms.volatility) * fluid;
+    uniforms.speed += ((deep * 0.5) - uniforms.speed) * fluid;
+    //
+    material.uniforms.uVolatility.value = uniforms.volatility;
+    material.uniforms.uSpeed.value = uniforms.speed;
+}
+
+init();
+animate();</script>
+</html>
